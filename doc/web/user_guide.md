@@ -69,8 +69,8 @@ These can be used as a starting point for customising your own experiments.
 It is advised to run a number of these examples to ensure the model is running correctly on your system.
 
 The predefined experiments can run by invoking the `run_model.py` script.
-This script takes care of preparing a directory with a number of files that inform the raw OpenQG binary of the setup (number of layers, time step size, resolution, etc.).
-The parameters of the expreiment are specified in .ncd (NetCDF) files in this directory. The script then calls the binary with the necessary arguments.
+This script takes care of preparing a directory with a number of files that inform the raw OpenQG executable of the setup (number of layers, time step size, resolution, etc.).
+The parameters of the expreiment are specified in .cdl files (formatted in NetCDF form language) in this directory. The script then calls the executable a specified number of with the necessary arguments.
 
 ## Experiment Directory Structure
 
