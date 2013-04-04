@@ -1,6 +1,6 @@
 # OpenQG Quickstart Guide
 
-The following instructions are designed to get you up and running with a simple example experiment. For more details on running the model please consult the user guide.
+The following instructions are designed to get you up and running with a simple example experiment. For more details on running the model please consult the [user guide](http://openqg.org/web/docs/project/user_guide).
 
 ## Dependencies
 
@@ -20,7 +20,7 @@ The source code for OpenQG is hosted on [github](https://github.com/BreakawayLab
 
     git clone git@github.com:BreakawayLabs/.git
 
-For more details on how to download different releases, or to download as a zip/tar file, check the [downloads](http://openqg.breakawaylabs.com.au/web/downloads) page.
+For more details on how to download different releases, or to download as a zip/tar file, check the [downloads](http://openqg.org/web/downloads) page.
 
 ## Compile
 
@@ -46,4 +46,4 @@ This will run the model and place the output in the `output/` subdirectory.
 
 ## What's Next?
 
-To find out more about configuring your own experiments and analysing results, please consult the user guide.
+To find out more about configuring your own experiments and analysing results, please consult the [user guide](http://openqg.org/web/docs/project/user_guide).
