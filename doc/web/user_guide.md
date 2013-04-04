@@ -74,6 +74,10 @@ The parameters of the expreiment are specified in .cdl files (formatted in NetCD
 
 ## Experiment Directory Structure
 
+When a predefined experiment is run, the `run-model.py` script first copies the configuration files of the specified experiment from the `data/` subdirectory into the subdirectories `in-orig/` and `in-0` 
+of the specified output directory. These are converted into binary .nc files in the `stage-0` directory, which are passed on to the model run, producing `output-0` subdirectory.  If further runs are requested with the `-r` argument, the data in `stage-0` and `output-0` is then
+ used to initiate the setup for the next run in `input-1`, producing new output directories, and so on.
+
 ## Running Custom Experiments
 
 ## Configuring OpenQG
