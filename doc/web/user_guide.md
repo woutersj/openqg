@@ -78,6 +78,9 @@ When a predefined experiment is run, the `run-model.py` script first copies the 
 of the specified output directory. These are converted into binary .nc files in the `stage-0` directory, which are passed on to the model run, producing `output-0` subdirectory.  If further runs are requested with the `-r` argument, the data in `stage-0` and `output-0` is then
  used to initiate the setup for the next run in `input-1`, producing new output directories, and so on.
 
+There are 5 required configuration files in the `input-orig` directory: `glam.cdl`, `ocn_basin.cdl`, `atm_basin.cdl`, `windstress.cdl` and `clock.cdl`.
+The `glam.cdl` sets up the parameters of the numerical mesh, `ocn_basin.cdl` contains the parameters for the oceanic flow, `atm_basin.cdl` for the atmospheric flow, `windstress.cdl` determines the wind stress and `clock.cdl` specifies the time length of the integration and the timestepping.
+
 ## Running Custom Experiments
 
 ## Configuring OpenQG
