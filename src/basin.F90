@@ -242,7 +242,7 @@ module basin
      type(box_type) :: b
      type(topog_type) :: topog
      type(qg_type) :: qg
-     type(atmos_mixed_type) :: ml
+     type(atmos_mixed_type) :: ml !< mixed layer
      type(atm_coupler_type) :: cpl
 
      type(basin_covar_type) :: cov

@@ -13,6 +13,9 @@ module core
 
 contains
 
+  !> Performs a time step of the quasi-geostrophic flow, inverts 
+  !! potential vorticity to pressure and computes potential vorticity on
+  !! the boundaries
   subroutine step_qg(tdt, ent, wekp, txis, txin, qg)
 
     type(qg_type), intent(inout) :: qg

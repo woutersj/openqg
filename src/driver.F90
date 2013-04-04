@@ -1,3 +1,13 @@
+!------------------------------------------------------------------------------
+! OpenQG - Quasigeostropic Coupled Model 
+!------------------------------------------------------------------------------
+!
+! MODULE: driver
+!
+! DESCRIPTION: 
+!> Performs an integration time step of the model.
+!------------------------------------------------------------------------------
+
 module driver
 
   use constants, only: SECDAY, SECSYR
@@ -38,8 +48,8 @@ contains
     type(ocn_basin_type), intent(inout) :: ocn
     type(atm_basin_type), intent(inout) :: atm
     type(windstress_type), intent(in) :: stress
-    double precision, intenT(in) :: tdto
-    double precision, intenT(in) :: tdta
+    double precision, intent(in) :: tdto
+    double precision, intent(in) :: tdta
     logical, intent(in) :: ocean_step
     logical, intent(in) :: ocn_supp_step
     logical, intent(in) :: atm_supp_step
@@ -86,6 +96,7 @@ contains
 
   end subroutine dynamic_step
 
+  !> Perform an integration time step for the ocean layer
   subroutine step_ocn(oml, qgo, ocn_cpl, tdto)
 
     type(ocean_mixed_type), intent(inout) :: oml
@@ -109,6 +120,7 @@ contains
 
   end subroutine step_ocn
 
+  !> Perform an integration time step for the atmospheric layer
   subroutine step_atm(aml, qga, atm_cpl, tdta, ocean_step)
     type(atmos_mixed_type), intent(inout) :: aml
     type(qg_type), intent(inout) :: qga

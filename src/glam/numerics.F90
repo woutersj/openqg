@@ -337,11 +337,15 @@ contains
 
   end function dPdy_2
 
+  !> Jacobian advection term J(q,p) plus
+  !! ah2fac times Del-4th(p) minus ah4fac times Del-6th(p).
+  !! Uses Arakawa energy and enstrophy conserving 9-point Jacobian
+  !! @param[in] p 3D array
+  !! @param[in] q 3D array
+  !! @param[out] jacob Jacobian array
+  !! @param[out] ajis Southern boundary Jacobian term
+  !! @param[out] ajin Northern boundary Jacobian term
   subroutine jacobian(p, q, b, jacob, ajis, ajin)
-
-    ! Jacobian advection term J(q,p) plus
-    ! ah2fac times Del-4th(p) minus ah4fac times Del-6th(p).
-    ! Uses Arakawa energy and enstrophy conserving 9-point Jacobian
 
     type(box_type), intent(in) :: b
     double precision, intent(in) :: p(b%nxp,b%nyp,b%nl)

@@ -11,6 +11,8 @@ module vorticity
 
 contains
 
+  !> Integrate the vorticity equation (2.27) in the user guide over one
+  !! timestep
   subroutine vort_step(qg, tdt, ent, wekp, txis, txin)
 
     type(qg_type), intent(inout) :: qg
@@ -30,6 +32,7 @@ contains
     double precision :: tmp_ajis(qg%b%nl), tmp_ajin(qg%b%nl)
 
     integer :: k
+    ! Calculate the Jacobian of p and q
     ! Uses Arakawa energy and enstrophy conserving 9-point Jacobian
     if (qg%b%cyclic) then
        call jacobian(qg%p, qg%q, qg%b, dqdt, &

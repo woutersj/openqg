@@ -1,3 +1,14 @@
+!------------------------------------------------------------------------------
+! OpenQG - Quasigeostropic Coupled Model 
+!------------------------------------------------------------------------------
+!
+! MODULE: openqg 
+!
+! DESCRIPTION: 
+!> The main program for openqg.
+!------------------------------------------------------------------------------
+
+
 program openqg
 
   use util, only: s2s, streq
@@ -874,22 +885,22 @@ contains
 
   end subroutine write_out_param
 
+
+  ! DESCRIPTION:
+  !> @brief Computes diffusive decay timescales for circular eddies whose radii
+  !! are the baroclinic Rossby radii, and for two-gridpoint noise.
+  !! See section 8.6 of the Userguide for derivation of timescales.
+  ! Input arguments:
+  !> @param nord		order of the diffusive term
+  !! @param nl		no. of QG layers  (=> nl-1 baroclinic modes)
+  !! @param coeff		vector of diffusion coefficients (should be >= 0)
+  !! @param ncoef		length of coefficient vector
+  !! @param dx		gridlength (m)
+  !! @param rdef		vector of nl modal deformation radii (m)
+  !!         (infinite value for barotropic mode replaced by 0.0)
+  !!         (all the above are unchanged on exit)
+
   subroutine diffts (nord, nl, coeff, ncoef, dx, rdef)
-
-    ! Computes diffusive decay timescales for circular eddies whose radii
-    ! are the baroclinic Rossby radii, and for two-gridpoint noise.
-    ! See section 8.6 of the Userguide for derivation of timescales.
-
-    ! Input arguments:
-    ! nord  : order of the diffusive term
-    ! nl    : no. of QG layers  (=> nl-1 baroclinic modes)
-    ! coeff : vector of diffusion coefficients (should be >= 0)
-    ! ncoef : length of coefficient vector
-    ! dx    : gridlength (m)
-    ! rdef  : vector of nl modal deformation radii (m)
-    !         (infinite value for barotropic mode replaced by 0.0)
-    !         (all the above are unchanged on exit)
-
 
     integer, intent(in) :: nord,nl,ncoef
     double precision, intent(in) :: coeff(ncoef),dx,rdef(nl)
