@@ -1,6 +1,6 @@
 # OpenQG - Quasigeostropic Coupled Model
 
-OpenQG is an idealised ocean-atmosphere model suitable for simulations of mid-latitude physical processes.
+OpenQG is an idealised ocean-atmosphere model suitable for simulations of mid-latitude geophysical fluid flows.
 OpenQG is suitable for use by both researchers and students.
 It can be run on a standard desktop machine in either single- or multi-threaded mode.
 Parallelisation is provided by OpenMP.
@@ -16,7 +16,7 @@ Congratuations, you just ran a North Atlantic double gyre experiment for 10 days
 The output can be found in `output/`.
 For a slightly gentler introduction see the quickstart guide:
 
-[http://openqg.breakawaylabs.com.au/web/docs/project/quickstart](http://openqg.breakawaylabs.com.au/web/docs/project/quickstart)
+[http://openqg.org/web/docs/project/quickstart](http://openqg.org/web/docs/project/quickstart)
 
 ## Dependencies
 
@@ -25,8 +25,8 @@ OpenQG links against LAPACK, NetCDF and FFTW3 and uses `gfortran` as the compile
 ## Documentation
 
 Full documentation can be found at:
-
-[http://openqg.breakawaylabs.com.au/web/docs](http://openqg.breakawaylabs.com.au/web/docs)
+open
+[http://openqg.org/web/docs](http://openqg.org/web/docs)
 
 ## Licence
 
