@@ -3,7 +3,7 @@ Main script for running OpenQG models. Run
 
   python run_model.py --help
 
-for uasge.
+for usage.
 """
 
 import argparse
